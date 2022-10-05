@@ -1,0 +1,29 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    .cart{
+        @apply absolute bg-white shadow-xl w-[300px] left-[50%] right-[50%] -translate-x-[50%] mt-10 duration-500 origin-top;
+    }
+    .active{
+        @apply ring-2 ring-orange-500 rounded
+    }
+    .thumbnail-active{
+        @apply active:ring-2 hover:rounded active:ring-orange-500 hover:opacity-50
+    }
+}
